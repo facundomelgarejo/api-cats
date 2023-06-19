@@ -50,6 +50,7 @@
 }
 
 #btnRegenerate{
+    position: relative;
     background-color: #7D6167;
     color: white;
     font-weight: 500;
@@ -59,7 +60,11 @@
     background-color: #685156;
 }
 
-
+.iconRefresh{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 2px;
+}
 #containerFavourites{
     align-items: center;
 }
@@ -163,6 +168,21 @@
     object-fit: cover; 
 }
 
+.skeleton{
+    width: 274px;
+    height: 326px;
+    border-radius: 10%;
+    animation: skeleton 0.8s linear infinite alternate;
+}
+
+@keyframes skeleton{
+    0% {
+        background-color: #cfcbcc;
+    }
+    100%{
+        background-color: #808080;
+    }
+}
 
 .sectionTrashbin{
     padding: 5vh;
@@ -196,6 +216,7 @@
 
     .row{
         margin-left: 0;
+        margin-right: 0;
     }
 
     .container{

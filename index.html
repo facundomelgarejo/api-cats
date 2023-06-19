@@ -12,7 +12,7 @@
     <title>Random Cats</title>
   </head>
   <body id="body">
-    
+    <!-- section toast -->
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
@@ -26,7 +26,7 @@
       </div>
     </div>
     </div>
-
+    <!-- section random -->
     <div class="container" style="align-items: center;">
       <div class="twelve m-4" style="padding-top: 20px;">
         <center><h2 class="colorTitle" >Random Cats</h2></center> 
@@ -38,50 +38,44 @@
           <button class="btnDelete" id="btnSave1">
             <img src="./assest/favoritos.png">
           </button>
-          <img id="img1" class="imgCat">
+          <div class="containerImg">
+            <div class="containerEskeleton containerEskeleton1">
+              <div class="skeleton"></div>
+            </div>
+            <img id="img1" class="imgCat">
+          </div>
+          
         </article>
         <article class="col-lg-3 articleRandom">
           <button class="btnDelete"  id="btnSave2">
             <img src="./assest/favoritos.png">
           </button>
-          <img id="img2" class="imgCat">
+          <div class="containerImg">
+            <div class="containerEskeleton containerEskeleton2">
+              <div class="skeleton"></div>
+            </div>
+            <img id="img2" class="imgCat">
+          </div>
         </article>
         <article class="col-lg-3 articleRandom">
           <button class="btnDelete"  id="btnSave3">
             <img src="./assest/favoritos.png">
           </button>
-          <img id="img3" class="imgCat">
+          <div class="containerImg">
+            <div class="containerEskeleton containerEskeleton3">
+              <div class="skeleton"></div>
+            </div>
+            <img id="img3" class="imgCat">
+          </div>
         </article>
         <div class="container">
           <div class="row w-80">
-            <button class="col-12 col-md-2 offset-md-5 btn btn-secondary  mt-4 mb-4" id="btnRegenerate" onclick="loadRandomCat()">Regenerate</button>
+            <button class="col-12 col-md-2 offset-md-5 btn btn-secondary  mt-4 mb-4" id="btnRegenerate" onclick="loadRandomCat()">Regenerate<ion-icon name="refresh-outline" class="iconRefresh"></ion-icon> </button>
           </div>
         </div>
       </section>  
     </div>
-    
-   
-    
-      
-     
-      
-     
-   
-
-<!-- 
-    <article >
-        <h2>Three Random cats</h2>
-        <img src="" alt="photo cat" srcset="" id="img1" width="250">
-        <button id="btnSave1">Save in Favourites</button>
-        <img src="" alt="photo cat" srcset="" id="img2" width="250">
-        <button id="btnSave2" >Save in Favourites</button>
-        <img src="" alt="photo cat" srcset="" id="img3" width="250">
-        <button id="btnSave3" >Save in Favourites</button>
-    
-        <button id="btnRegenerate" onclick="loadRandomCat()">regenerate</button>
-    </article>
-
--->
+    <!-- section Favourites -->
     <div class="container" id="containerFavourites">
       <div class="twelve m-4" style="padding-top: 60px;">
        <center><h2 class="colorTitle thirteen"> Favourites cats</h2></center>
@@ -93,7 +87,7 @@
     
 
 
-
+    <!-- section Trashbin -->
     <div class="container" style="padding-bottom: 200px;">
       <div class="twelve m-4" style="padding-top: 60px;">
         <center><h2 class="colorTitle">Trashbin Cats</h2></center> 
@@ -106,7 +100,7 @@
     <section id="toast">
       
     </section>
-
+    <!-- section Footer -->
     <div class="container">
       <div class="row text-center">
           <p style="font-size: 12px;">Facundo G. Melgarejo Roma 
@@ -117,15 +111,11 @@
   </div>
     
      <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    <!-- Icon & main.js-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

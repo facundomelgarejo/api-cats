@@ -12,12 +12,14 @@ const URL_API_TRASHBIN_DELETE = (id) => `https://api.thecatapi.com/v1/favourites
 
 
 async function loadRandomCat(){
+    
     const res = await fetch(URL_API_RANDOM)
     const data = await res.json()
-
+    
     if(res.status !== 200){
         spanError.innerHTML = 'Hubo un error ' + res.status + data.message;
     }else {
+        
         const img1 = document.querySelector('#img1')
         const img2 = document.querySelector('#img2')
         const img3 = document.querySelector('#img3')
@@ -36,8 +38,15 @@ async function loadRandomCat(){
         btnSave1.onclick = () => saveFavouriteCats(data[0].id)
         btnSave2.onclick = () => saveFavouriteCats(data[1].id)
         btnSave3.onclick = () => saveFavouriteCats(data[2].id)
-    }
 
+        
+    }
+    const containerEskeleton1 = document.querySelector('.containerEskeleton1')
+    const containerEskeleton2 = document.querySelector('.containerEskeleton2')
+    const containerEskeleton3 = document.querySelector('.containerEskeleton3')
+    containerEskeleton1.innerHTML = '';
+    containerEskeleton2.innerHTML = '';
+    containerEskeleton3.innerHTML = '';
 }
 
 
